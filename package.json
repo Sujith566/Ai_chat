@@ -1,0 +1,15 @@
+{
+  "name": "ai-chat-assistant",
+  "version": "1.0.0",
+  "description": "Intelligent AI Chat Assistant with Real-Time Streaming and Tone Toggle",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
